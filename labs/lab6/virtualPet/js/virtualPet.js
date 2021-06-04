@@ -45,8 +45,10 @@ function Pet() {
     }
 }
 
+//create an instance on the Pet object
 let virtualPet = new Pet();
 
+//draw the pet
 function draw() {
 
     background(255);
@@ -63,3 +65,4 @@ function draw() {
     fill(230, 230, 140);
     rect(190, 210, 20, 10);
 }
+
