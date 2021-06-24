@@ -135,6 +135,7 @@ function addBodyPart() {
         fill(0);
         rect(118,220,40,6);
         resultDiv.innerHTML = "Game over";
+        wordDiv.innerHTML = wordToGuess;
     }
 } 
 
