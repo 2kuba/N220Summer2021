@@ -130,7 +130,7 @@ function addBodyPart() {
     else if (bodyPartCount == 5) {
         fill(0);
         rect(152,220,40,6);
-    } //add another leg, user has lost
+    } //add another leg, user has lost and correct word is displayed
     else if (bodyPartCount == 6) {
         fill(0);
         rect(118,220,40,6);
