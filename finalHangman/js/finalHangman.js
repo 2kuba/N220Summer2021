@@ -15,7 +15,7 @@ wordToGuess = wordBank[wordIndex];
 wordLength = Number(wordBank[wordIndex].length);
 
 //an underscore string
-blank = "_";
+blank = "_ ";
 
 //repeat the underscore string times the length of the word to guess
 blanks = blank.repeat(wordLength);
@@ -24,7 +24,7 @@ blanks = blank.repeat(wordLength);
 wordDiv.innerHTML = blanks;
 
 //split the blanks variable into an array so the letters guessed can be inserted in the correct position
-blankArray = blanks.split("");
+blankArray = blanks.split(" ");
 
 //keep track of number of wrong guesses
 bodyPartCount = 0;
@@ -78,7 +78,7 @@ function guessLetter(event) {
         arrayToWord = blankArray.toString();
 
         //remove the commas from the newly created string
-        blanks = arrayToWord.replace(/,/g,"");
+        blanks = arrayToWord.replace(/,/g," ");
 
         //put the new string in the word div
         wordDiv.innerHTML = blanks;
@@ -94,7 +94,8 @@ function guessLetter(event) {
     }
 
     //get values of blanks (word guess in progress) and randomly selected word
-    blanksValue = blanks.valueOf();
+    blanksString = blanks.replace(/ /g,"");
+    blanksValue = blanksString.valueOf();
     wordValue = wordToGuess.valueOf();
 
     //if all the letters have been guessed correctly and the blanks string matches the randomly selected word string, the user wins
